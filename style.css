@@ -19,6 +19,7 @@ body {
 }
 
 .choice {
+    padding-top: -2rem;
     height: 3rem;
     width: 8rem;
     background: linear-gradient(to right, blue, purple);
@@ -30,10 +31,20 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 2px solid;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 600px;
+    height: 100vh;
+    margin: auto;
+    border-radius: 10px;
+    
+    
 }
 
 .result {
-    margin-top: 4rem;
+    margin-top: 3rem;
     font-size: 3rem;
-    color: white;
+    font-weight: 700;
+    color: brown;
+
 }
