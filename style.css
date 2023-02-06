@@ -1,0 +1,39 @@
+body {
+    box-sizing: border-box;
+    background-image: url(./IMG_20221026_165936.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.choose {
+    font-size: 3rem;
+    color: black;
+    padding-top: 4rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    
+}
+
+.choice {
+    height: 3rem;
+    width: 8rem;
+    background: linear-gradient(to right, blue, purple);
+    color: white;
+}
+
+.contianer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    margin-top: 4rem;
+    font-size: 3rem;
+    color: white;
+}

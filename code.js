@@ -4,6 +4,18 @@ const scissorsBtn = document.querySelector('.scissors')
 const paperBtn = document.querySelector('.paper')
 const resultDisplay = document.querySelector('.result')
 
+function getComputerChoice() {
+    let randomNumber = Math.floor((Math.random() * 3) + 1);
+  
+    if (randomNumber === 1) {
+      return 'Rock'
+    } else if (randomNumber === 2) {
+      return 'Paper'
+    } else if (randomNumber === 3) {
+      return 'Scissors'
+    }
+  }
+
 const playRock = rockBtn.addEventListener('click', () => {
   let result;
   if (computerChoice === 'Rock') {
@@ -40,14 +52,4 @@ const playScissors = scissorsBtn.addEventListener('click', () => {
     resultDisplay.textContent = result;
   })
 
-function getComputerChoice() {
-  let randomNumber = Math.floor((Math.random() * 3) + 1);
 
-  if (randomNumber === 1) {
-    return 'Rock'
-  } else if (randomNumber === 2) {
-    return 'Paper'
-  } else if (randomNumber === 3) {
-    return 'Scissors'
-  }
-}
