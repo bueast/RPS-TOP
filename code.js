@@ -1,60 +1,53 @@
 const computerChoice = getComputerChoice();
-const playerChoice = getPlayerChoice();
+const rockBtn = document.querySelector('.rock')
+const scissorsBtn = document.querySelector('.scissors')
+const paperBtn = document.querySelector('.paper')
+const resultDisplay = document.querySelector('.result')
+
+const playRock = rockBtn.addEventListener('click', () => {
+  let result;
+  if (computerChoice === 'Rock') {
+    result = 'It is a draw!'
+  } else if (computerChoice === 'Paper') {
+    result = 'You lose!'
+  } else if (computerChoice === 'Scissors') {
+    result = 'You win!!!'
+  }
+  resultDisplay.textContent = result;
+})
+
+const playScissors = scissorsBtn.addEventListener('click', () => {
+    let result;
+    if (computerChoice === 'Scissors') {
+      result = 'It is a draw!'
+    } else if (computerChoice === 'Rock') {
+      result = 'You lose!'
+    } else if (computerChoice === 'Paper') {
+      result = 'You win!!!'
+    }
+    resultDisplay.textContent = result;
+  })
+
+  const playPaper = paperBtn.addEventListener('click', () => {
+    let result;
+    if (computerChoice === 'Paper') {
+      result = 'It is a draw!'
+    } else if (computerChoice === 'Scissors') {
+      result = 'You lose!'
+    } else if (computerChoice === 'Rock') {
+      result = 'You win!!!'
+    }
+    resultDisplay.textContent = result;
+  })
 
 function getComputerChoice() {
-    let randomNumber = Math.floor((Math.random() * 3) + 1);
+  let randomNumber = Math.floor((Math.random() * 3) + 1);
 
-    if (randomNumber == 1) {
-        return 'Rock'
-    }
-    else if (randomNumber == 2) {
-        return 'paper'
-    }
-    else if (randomNumber == 3) {
-        return 'Scissors'
-    }
-}
-
-function getPlayerChoice() {
-    let playerSelection = document.getElementsByClassName("choice".); // This is the part I need help connecting //
-
-    if (playerSelection = 'paper') {
-        return 'player paper'
-    }
-    else if (playerSelection = 'scissors') {
-        return 'player Scissors'
-    }
-    else if (playerSelection = 'rock') {
-        return 'player rock'
-    }
-}
-
-function playGame(playerChoice, computerChoice) {
-    if (playerChoice === 'player rock' && computerChoice === 'rock') {
-        return 'It is a draw!'
-    }
-    else if (playerChoice === 'player rock' && computerChoice === 'paper') {
-        return 'You lose!'
-    }
-    else if (playerChoice === 'player rock' && computerChoice === 'scissors') {
-        return 'You win!!!'
-    }
-    else if (playerChoice === 'player paper' && computerChoice === 'paper') {
-        return 'It is a draw!'
-    }
-    else if (playerChoice === 'player paper' && computerChoice === 'scissors') {
-        return 'You lose!'
-    }
-    else if (playerChoice === 'player paper' && computerChoice === 'rock') {
-        return 'You win!!!'
-    }
-    else if (playerChoice === 'player scissors' && computerChoice === 'scissors') {
-        return 'It is a draw!'
-    }
-    else if (playerChoice === 'player scissors' && computerChoice === 'rock') {
-        return 'You lose!'
-    }
-    else if (playerChoice === 'player scissors' && computerChoice === 'paper') {
-        return 'You win!!!'
-    }
+  if (randomNumber === 1) {
+    return 'Rock'
+  } else if (randomNumber === 2) {
+    return 'Paper'
+  } else if (randomNumber === 3) {
+    return 'Scissors'
+  }
 }
